@@ -1,7 +1,7 @@
 Flashy
 A live Next.js demo app showing Flash—real-time, serverless autocomplete built on Upstash Redis.
 
-![Flashy UI Screenshot](image.png)
+<img width="1917" height="970" alt="image" src="https://github.com/user-attachments/assets/9b777680-f5f7-47c1-b702-69c1ab63e081" />
 
 Showcases Flash SDK: Demonstrates blazing-fast autocomplete with beautiful UI and cloud-based persistence.
 
