@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Flashy
+A live Next.js demo app showing Flash—real-time, serverless autocomplete built on Upstash Redis.
 
-## Getting Started
+![Flashy UI Screenshot](image.png)
 
-First, run the development server:
+Showcases Flash SDK: Demonstrates blazing-fast autocomplete with beautiful UI and cloud-based persistence.
 
-```bash
+End-to-End Example: Try the experience—type any letter to see relevant suggestions powered by Upstash Redis, served securely via API routes.
+
+Modern Stack: Fully server-rendered (SSR), Next.js App Router, Tailwind CSS, TypeScript, Bun or Node.js.
+
+🚀 Live Demo
+https://flashy-2acr.onrender.com
+
+Getting Started (Local Development)
+Clone the repo:
+
+bash
+git clone https://github.com/sivaratrisrinivas/Flashy.git
+cd Flashy
+Install dependencies (using Bun or npm):
+
+bash
+bun install
+# or
+npm install
+Set Up Environment:
+
+Create a .env.local in the project root:
+
+text
+UPSTASH_REDIS_URL=your-upstash-redis-url
+UPSTASH_REDIS_TOKEN=your-upstash-redis-token
+Seed Redis with demo data (optional, but recommended):
+
+bash
+bun seed.ts
+# or
+npm run seed
+Start the app:
+
+bash
+bun run dev
+# or
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 and try typing—autocomplete is live!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Features
+Real-Time Suggestions: Instantly see relevant options as you type—across the full alphabet.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Secure by Default: All database access (Upstash Redis) is done via API routes, never exposing secrets to the client.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Polished UX: Fully responsive, themed interface with a minimalist “Flash” title and visually rich dropdown.
 
-## Learn More
+Server-Side Rendering: Next.js API routes handle fetching, seeding, and serving data efficiently.
 
-To learn more about Next.js, take a look at the following resources:
+Deployment
+Deploy your own copy (in minutes!):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Push your repo to GitHub.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Create an Upstash Redis database (free tier supported).
 
-## Deploy on Vercel
+Deploy to Render.com or Vercel:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Set required environment variables.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Build/start commands: bun install && bun run build, bun run dev, etc.
+
+Visit your live URL and share it with the world!
