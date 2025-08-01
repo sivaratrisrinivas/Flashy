@@ -1,77 +1,80 @@
 # Flashy
 
-A live Next.js demo app showing Flash—real-time, serverless autocomplete built on Upstash Redis.
+A Next.js demo app showcasing real-time autocomplete built with Upstash Redis.
 
-<img width="1917" height="970" alt="image" src="https://github.com/user-attachments/assets/9b777680-f5f7-47c1-b702-69c1ab63e081" />
+![Flashy Demo](https://github.com/user-attachments/assets/9b777680-f5f7-47c1-b702-69c1ab63e081)
 
-Showcases Flash SDK: Demonstrates blazing-fast autocomplete with beautiful UI and cloud-based persistence.
+## Overview
 
-End-to-End Example: Try the experience—type any letter to see relevant suggestions powered by Upstash Redis, served securely via API routes.
+Flashy demonstrates a fast autocomplete system with a clean interface and cloud-based data storage. Type any letter to see instant suggestions powered by Upstash Redis, served securely through API routes.
 
-Modern Stack: Fully server-rendered (SSR), Next.js App Router, Tailwind CSS, TypeScript, Bun or Node.js.
+Built with Next.js App Router, Tailwind CSS, TypeScript, and supports both Bun and Node.js.
 
-## 🚀 Live Demo
+## Live Demo
 
 https://flashy-2acr.onrender.com
 
-## Getting Started (Local Development)
+## Getting Started
 
-### Clone the repo:
+### Prerequisites
 
-```bash
-git clone https://github.com/sivaratrisrinivas/Flashy.git
-cd Flashy
-```
+- Node.js 18+ or Bun
+- An Upstash Redis database
 
-### Install dependencies (using Bun or npm):
+### Installation
 
-```bash
-bun install
-# or
-npm install
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sivaratrisrinivas/Flashy.git
+   cd Flashy
+   ```
 
-### Set Up Environment:
+2. Install dependencies:
+   ```bash
+   bun install
+   # or
+   npm install
+   ```
 
-Create a `.env.local` in the project root:
+3. Set up environment variables:
+   
+   Create a `.env.local` file in the project root:
+   ```env
+   UPSTASH_REDIS_URL=your-upstash-redis-url
+   UPSTASH_REDIS_TOKEN=your-upstash-redis-token
+   ```
 
-```env
-UPSTASH_REDIS_URL=your-upstash-redis-url
-UPSTASH_REDIS_TOKEN=your-upstash-redis-token
-```
+4. Seed the database with sample data (recommended):
+   ```bash
+   bun seed.ts
+   # or
+   npm run seed
+   ```
 
-### Seed Redis with demo data (optional, but recommended):
+5. Start the development server:
+   ```bash
+   bun run dev
+   # or
+   npm run dev
+   ```
 
-```bash
-bun seed.ts
-# or
-npm run seed
-```
-
-### Start the app:
-
-```bash
-bun run dev
-# or
-npm run dev
-```
-
-Open http://localhost:3000 and try typing—autocomplete is live!
+6. Open http://localhost:3000 and start typing to see the autocomplete in action.
 
 ## Features
 
-- **Real-Time Suggestions**: Instantly see relevant options as you type—across the full alphabet.
-- **Secure by Default**: All database access (Upstash Redis) is done via API routes, never exposing secrets to the client.
-- **Polished UX**: Fully responsive, themed interface with a minimalist "Flash" title and visually rich dropdown.
-- **Server-Side Rendering**: Next.js API routes handle fetching, seeding, and serving data efficiently.
+- **Real-time suggestions**: See relevant options instantly as you type
+- **Secure data handling**: All database operations happen through secure API routes
+- **Responsive design**: Works seamlessly across all device sizes
+- **Server-side rendering**: Fast initial page loads with Next.js
 
 ## Deployment
 
-Deploy your own copy (in minutes!):
+Deploy your own instance:
 
-1. Push your repo to GitHub.
-2. Create an Upstash Redis database (free tier supported).
-3. Deploy to Render.com or Vercel:
-   - Set required environment variables.
-   - Build/start commands: `bun install && bun run build`, `bun run dev`, etc.
-4. Visit your live URL and share it with the world!
+1. Push your repository to GitHub
+2. Create an Upstash Redis database (free tier available)
+3. Deploy to your preferred platform (Render, Vercel, etc.):
+   - Set the required environment variables
+   - Use build commands: `bun install && bun run build`
+   - Use start command: `bun run dev`
+4. Share your live URL with others
