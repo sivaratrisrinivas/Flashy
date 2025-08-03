@@ -92,6 +92,13 @@ export default function Home() {
                       setQuery(sug.item);
                       setSuggestions([]);
                       inputRef.current?.focus();
+
+                      // New: Increment score on selection
+                      fetch('/api/suggestions', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ item: sug.item, increment: 1 })
+                      }).catch(() => console.error('Failed to update score'));
                     }}
                     className={`flex justify-between px-6 py-3 cursor-pointer transition-all duration-200 ${active === idx ? "bg-white/20 scale-105" : "hover:bg-white/10"
                       } text-white text-lg`}
