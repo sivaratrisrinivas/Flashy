@@ -6,7 +6,7 @@ A Next.js demo app showcasing real-time autocomplete built with Upstash Redis.
 
 ## Overview
 
-Flashy demonstrates a fast autocomplete system with a clean interface and cloud-based data storage. Type any letter to see instant suggestions powered by Upstash Redis, served securely through API routes.
+Flashy demonstrates a fast autocomplete system with a clean interface and cloud-based data storage. Type any letter to see instant suggestions powered by Upstash Redis, served securely through API routes. The system learns from user interactions, improving suggestion relevance over time through adaptive scoring.
 
 Built with Next.js App Router, Tailwind CSS, TypeScript, and supports both Bun and Node.js.
 
@@ -68,9 +68,11 @@ https://flashy-2acr.onrender.com
 ## Features
 
 - **Real-time suggestions**: See relevant options instantly as you type
+- **Adaptive scoring**: Suggestions improve over time as users select them
 - **Secure data handling**: All database operations happen through secure API routes
 - **Responsive design**: Works seamlessly across all device sizes
 - **Server-side rendering**: Fast initial page loads with Next.js
+- **Keyboard navigation**: Use arrow keys to navigate suggestions
 
 ## Deployment
 
